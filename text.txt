@@ -1,0 +1,46 @@
+
+1. How do you import a module?
+import is used to access what export has made available, es5 we use require and es6 we switch the syntax to import
+
+const myLibrary = require('./my-library');
+
+ 
+
+2. What JavaScript statement do you use to export a module
+
+The export keyword is used when we want to make something available somewhere
+const fs = require('fs')
+module.exports.mkdir = () => {
+  fs.mkdir('./terminalcommands', { recursive: true }, (err) => {
+  if (err) throw err;
+  console.log('new directory created')
+});
+};
+
+
+
+Online Research Questions
+
+1. Are there other ways to export a module?
+
+we can export file modules or folders as modules. 
+For file modules, if the exact filename is not found, then Node.js will attempt to load the required filename with the added extensions: .js, .json, and finally .node.
+For folders as modules, the first is to create a package.json file in the root of the folder, which specifies a main module. An example package.json file might look like this:
+
+We can export a variable, an object literal, a class and a function
+
+
+2. What are ES6 modules and how do they differ from the module we created in this checkpoint?
+
+With ES6 modules we can easily reuse, maintain, separate and encapsulate components from being changed by external behavior. Whereas CommonJS uses the keywords require and exports require is a function used to import functions from another module. exports is an object where any function put into it will get exported. 
+
+In addition to that we also have Asynchronous Module Definition (AMD) the function is called only when the requested modules are finished loading. The define function takes the first argument as an array of dependency modules.RequireJS implements the AMD API. It loads the plain JavaScript files as well as modules by using plain script tags. It includes an optimizing tool which can be run while deploying our code for better performance.
+
+
+
+
+
+
+
+
+
